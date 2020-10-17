@@ -1,0 +1,393 @@
+<!doctype html>
+<html>
+    <head>
+    <title>About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <style>
+        *{
+            box-sizing: border-box;
+			margin: 0;
+        }
+        
+        body{
+            margin: 0px;
+            font-family: 'Roboto Slab', serif;
+        }
+       .main> h1{
+            font-family: 'Satisfy', cursive;
+            color: white;
+            font-size: 50px;
+        } 
+        h4{
+            letter-spacing: 3px;
+            font-family: 'Lato', sans-serif;
+            color: white;
+        }
+        .main{
+            height: 100vh;
+            display: flex;  /* All below properties work with flex only */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url(triangles-1430105.svg);
+            background-size: cover;
+            border: 5px solid white;
+        }
+        
+        header{
+            position: absolute;
+            top: 10px;
+            width: 100%;
+        }
+        
+        header ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            list-style: none;
+            color: white;
+        }
+        header ul li{
+            margin-right: 50px;
+            font-size: 18px;
+        }
+        
+        header ul a{
+            text-decoration: none;
+            color: white;
+        }
+        
+        .seconddiv > p, .seconddiv > h2 , .thirddiv > p, .thirddiv > h2{
+            color: black;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .seconddiv , .thirddiv, .fourthdiv{
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+		.seconddiv>h1{
+			text-align: center;
+			color: navy;
+			font-size: 2.5em;
+			}
+        .blockcontainer{
+            display: flex;
+            /* All below properties work with flex only */
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
+         .blockcontainer > div{
+            padding: 20px;
+            font-size: 20px;
+            line-height: 120%;
+            margin-left: 40px;
+            margin-right: 40px;
+            text-align: center;
+            flex: 1 1 0px;
+        }
+        
+        .blockcontainer > div > i {
+            font-size: 120px;
+            color: navy;
+        }
+        
+        .btn{
+            background-color: firebrick;
+            color: white;
+            cursor: pointer;
+            width: 50%;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        
+        .fourthdiv{
+            background-image: linear-gradient(navy, purple);
+            color: white;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .fourthdiv  div{
+            font-size: 110%;
+            letter-spacing: 2px;
+            line-height: 5px;
+            padding: 10px;           
+        }
+      
+        .fourthdiv a{
+            text-decoration: none;
+        }
+        .fourthdiv i{
+            font-size: 120%;
+        }
+		footer{
+			padding: 10px;
+			background-color: black;
+			color:white;
+			text-align: center;
+			font-size: 18px;
+			line-height: 30px;
+			opacity: .8;
+		}
+        
+        
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+       .blockcontainer{
+            display: flex;
+            /* All below properties work with flex only */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+    }
+  }
+
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+       .blockcontainer{
+            display: flex;
+            /* All below properties work with flex only */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+    }
+       .blockcontainer > div{
+            padding: 20px;
+            font-size: 16px;
+            line-height: 120%;
+            margin-left: 40px;
+            margin-right: 40px;
+            text-align: center;
+            flex: 1 1 0px;
+            line-height: 1.3em;
+           }
+         
+        .seconddiv > h2 , .thirddiv > h2{
+            color: black;
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+    }
+       header ul li{
+            margin-right: 50px;
+            font-size: 1.5em;
+        }
+ }
+		/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #f1f1f1f1;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 22px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+  padding: 20px;
+  background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;
+		margin-top: 20px;}
+		
+		.myslides>img{
+			height: 50px;
+		}
+
+		/*Slider ENDS*/
+        
+    </style>
+    </head>
+    <body>
+        <div class="main"> 
+        <header>    
+        </header>    
+        <h1 style="font-family: 'Satisfy', cursive;">We are ROYAL CODERS</h1>
+        <h4 class="fh4">ENGINEERING STUDENTS</h4>
+        </div>
+        
+    <div class="seconddiv">
+        <a name="about"></a>
+        <h1>ABOUT US</h1>
+        <p style="margin-bottom: 60px;">Hello Everyone !</p>
+
+        <div class="blockcontainer">
+            <div class="a">
+            <i class="fa fa-briefcase" aria-hidden="true"></i>
+            <p>We are a team (Royal Coders) of Web Developers from Ajmer, Rajasthan. </p>
+            </div>
+            <div class="b">
+            <i class="fa fa-code" aria-hidden="true"></i>
+            <p>Programming Languages that we know includes C, C++, Python, HTML & CSS, Javascript etc. </p>
+            </div>
+            <div class="a">
+            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+            <p>We are 2nd Year B-Tech Computer Science students persuing our engineering from Engineering College Ajmer. </p>
+            </div>
+        
+        </div>
+        
+    </div>
+        
+<h1 style="text-align: center; color: navy; margin-bottom: 30px; margin-top: 50px; font-size: 3em">Our Team</h1>		
+	<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width slides/quotes -->
+  <div class="mySlides">
+	<img src="devang%20(2).jpg" style="height: 225px; width: 225px; border-radius: 50%; margin-bottom: 40px;"> 
+	<p style= "font-size: 20px;">DEVANG MATHUR</p>
+    <p class="author">- Developer & Designer</p>
+  </div>
+
+  <div class="mySlides">
+	<img src="Ankit%20Arora.jpeg" style="height: 225px; width: 225px; border-radius: 50%; margin-bottom: 40px;"> 
+	<p style= "font-size: 20px;">ANKIT ARORA</p>
+    <p class="author">- Developer & Designer</p>
+  </div>
+
+  <div class="mySlides">
+	<img src="Anshu%20kumar%20sharma.jpeg" style="height: 225px; width: 225px; border-radius: 50%; margin-bottom: 40px;"> 
+    <p style= "font-size: 20px;">ANSHU KUMAR SHARMA</p>
+    <p class="author">- Developer</p>
+  </div>
+	
+  <div class="mySlides">
+	<img src="kinshuk.jpg" style="height: 225px; width: 225px; border-radius: 50%; margin-bottom: 40px;"> 
+    <p style= "font-size: 20px;">KINSHUK GAUR</p>
+    <p class="author">- Content Writer</p>
+  </div>
+	
+	<div class="mySlides">
+	<img src="nikhil%20purshwani.jpeg" style="height: 225px; width: 225px; border-radius: 50%; margin-bottom: 40px;"> 
+    <p style= "font-size: 20px;">NIKHIL PURSHWANI</p>
+    <p class="author">- Developer</p>
+  </div>
+
+  <!-- Next/prev buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<!-- Dots/bullets/indicators -->
+<div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+
+</div>
+		
+	<!-- Slider ends -->
+
+ <div class="fourthdiv">
+        <h2 style="margin-bottom: 20px;">Follow Us</h2>
+        <a href="https://www.instagram.com/devang__mathur?r=nametag"><div style="color: orangered"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</div></a>
+        <a href="https://www.linkedin.com/in/devang-mathur-757a781ab?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bria%2BWWBDQd2%2FhLGAWlF0Kw%3D%3D"><div style="color: lightblue"><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</div></a>
+        <a href="mailto:devang1234mathur@gmail.com"><div style="color: coral"><i class="fa fa-envelope-o" aria-hidden="true"></i> E-Mail</div></a>
+	    <a href="mailto:devang1234mathur@gmail.com"><div style="color: cornflowerblue"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</div></a>
+
+            
+    </div>		
+<footer>
+			<div style="margin-top:20px; ">Powered By Royal Coders</div>
+			<div>&copy; All Rights Reserved 2020</div>
+	</footer>
+	<script>
+		var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+		</script>
+    </body>
+</html>
